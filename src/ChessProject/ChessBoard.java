@@ -2,7 +2,7 @@ package ChessProject;
 
 public class ChessBoard {
     public ChessPiece[][] board = new ChessPiece[8][8];
-    private String nowPlayer;
+    public String nowPlayer;
 
     public ChessBoard(String nowPlayer) {
         this.nowPlayer = nowPlayer;

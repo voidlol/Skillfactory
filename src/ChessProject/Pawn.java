@@ -7,7 +7,7 @@ public class Pawn extends ChessPiece {
 
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
-        if (!isFreeWay(chessBoard, line, column, toLine, toColumn)) return false;
+        if ((column != toColumn) || !isFreeWay(chessBoard, line, column, toLine, toColumn)) return false;
         if (chessBoard.board[toLine][toColumn] != null && chessBoard.board[toLine][toColumn].getColor().equals(this.color)) return false;
         if (this.color.equals("White")) {
             if (line == 1) {
