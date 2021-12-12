@@ -29,7 +29,7 @@ public abstract class ChessPiece {
         int lineInc = Integer.compare(toLine, line);
         int columnInc = Integer.compare(toColumn, column);
         int num = Math.max(Math.abs(toLine - line), Math.abs(toColumn - column));
-        for (int i = 1; i <= num; i++) {
+        for (int i = 1; i <= num - 1; i++) {
             if (chessBoard.board[line+lineInc*i][column+columnInc*i] != null) return false;
         }
         return true;
